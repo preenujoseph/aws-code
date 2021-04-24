@@ -82,9 +82,9 @@ def AddEmp():
         
             
             try:
-                dynamodb_client = boto3.client('dynamodb', region_name= customregion )
+                dynamodb_client = boto3.client('dynamodb', region_name= 'us-east-1' )
                 dynamodb_client.put_item(
-                 TableName= customtable,
+                 TableName= 'employee_table',
                     Item={
                      'empid': {
                           'N': emp_id
